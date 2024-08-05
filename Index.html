@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Animal Crossing Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+    <img src="inicio.png" alt="">
+        <div class="menu container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Guía de la vida isleña</a></li>
+                    <li><a href="#">Happy Home Paradise</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>Animal Crossing <span> <br>Guide</span> </h1>
+                <p>
+                    Bienvenidos a una guía del juego Animal Crossing: New Horizons. 
+                    Aqui encontrarás información del juego y de la expansión Happy Home Paradise 
+                    
+                </p>
+                <div class="butons">
+                    <a href="#" class="btn-1">Terraforming</a>
+                    <a href="#" class="btn-1">Personajes</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<section>
+    
+    <section class="calendar container">
+
+        <h2>Calendario</h2>
+
+        <div class="calendar">
+            <div class="calendar-header">
+                <div class="calendar-controls">
+                    <button id="prev-month">Anterior</button>
+                    <button id="next-month">Siguiente</button>
+                </div>
+                <h2 id="month-name">Agosto 2024</h2>
+            </div>
+            <div class="calendar-body" id="calendar-body">
+                <!-- Días se generarán con JavaScript -->
+            </div>
+        </div>
+            <script>
+            const calendarBody = document.getElementById('calendar-body');
+            const monthName = document.getElementById('month-name');
+            const prevMonthBtn = document.getElementById('prev-month');
+            const nextMonthBtn = document.getElementById('next-month');
+    
+            let currentMonth = new Date().getMonth();
+            let currentYear = new Date().getFullYear();
+            let selectedDay = null;
+    
+            function renderCalendar(month, year) {
+                const firstDay = new Date(year, month, 1).getDay();
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+                const today = new Date();
+                const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                
+                monthName.textContent = `${monthNames[month]} ${year}`;
+    
+                calendarBody.innerHTML = '';
+                const days = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+                days.forEach(day => {
+                    const div = document.createElement('div');
+                    div.className = 'header';
+                    div.textContent = day;
+                    calendarBody.appendChild(div);
+                });
+    
+                // Espacios vacíos antes del primer día del mes
+                for (let i = 0; i < firstDay; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'empty';
+                    calendarBody.appendChild(div);
+                }
+    
+                // Días del mes
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const div = document.createElement('div');
+                    div.className = 'day';
+                    div.textContent = day;
+                    div.addEventListener('click', () => selectDay(day));
+    
+                    // Marcar el día actual
+                    if (day === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
+                        div.classList.add('today');
+                    }
+    
+                    calendarBody.appendChild(div);
+                }
+            }
+    
+            function selectDay(day) {
+                if (selectedDay) {
+                    selectedDay.classList.remove('selected');
+                }
+                const dayDivs = Array.from(calendarBody.getElementsByClassName('day'));
+                selectedDay = dayDivs.find(div => div.textContent == day);
+                if (selectedDay) {
+                    selectedDay.classList.add('selected');
+                }
+            }
+    
+            prevMonthBtn.addEventListener('click', () => {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                renderCalendar(currentMonth, currentYear);
+            });
+    
+            nextMonthBtn.addEventListener('click', () => {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                renderCalendar(currentMonth, currentYear);
+            });
+    
+            // Renderizar el calendario inicial
+            renderCalendar(currentMonth, currentYear);
+            </script>
+
+        </div>
+    </section>
+ </section>
+
+    <section class="contact container">
+        <div class="contact-container">
+            <h3>Suscribete</h3>
+            <form>
+                <input type="Email" placeholder="Escribe tu correo">
+                <input type="submit" class="btn-3" value="Enviar">
+            </form>
+        </div>
+
+    </section>
+
+    <footer class="footer container">
+
+        <div class="link">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Guía de la vida isleña</a></li>
+                <li><a href="#">Happy Home Paradise</a></li>
+            
+            </ul>
+        </div>
+
+    </footer>
+
+
+
+</body>
+</html>

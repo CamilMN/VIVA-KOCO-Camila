@@ -23,7 +23,7 @@ img {
 }
 
 .header {
-    background-image: url(images/inicio.png);
+    background-image: image('inicio.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
