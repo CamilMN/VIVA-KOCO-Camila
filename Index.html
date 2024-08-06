@@ -2,13 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Crossing Guide</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header class="header">
-    <img src="inicio.png" alt="">
+    
         <div class="menu container">
             <nav class="navbar">
                 <ul>
@@ -34,108 +36,111 @@
         </div>
     </header>
 
+    <h2>Calendario</h2>
+
 <section>
     
     <section class="calendar container">
-
-        <h2>Calendario</h2>
-
-        <div class="calendar">
-            <div class="calendar-header">
-                <div class="calendar-controls">
-                    <button id="prev-month">Anterior</button>
-                    <button id="next-month">Siguiente</button>
+        
+        <div class="calendar-content container">
+            <div class="left">
+                <div class="calendar">
+                    <div class="month">
+                        <i class="fa fa-angle-left prev"></i>
+                        <div class="date">Agosto 2024</div>
+                        <i class="fa fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>sun</div>
+                        <div>mon</div>
+                        <div>tue</div>
+                        <div>wed</div>
+                        <div>thu</div>
+                        <div>fri</div>
+                        <div>sat</div>
+                    </div>
+                    <div class="days">
+                        <div class="day prev-date">30</div>
+                        <div class="day prev-date">31</div>
+                        <div class="day">1</div>
+                        <div class="day">2</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+                        <div class="day">5</div>
+                        <div class="day">6</div>
+                        <div class="day">7</div>
+                        <div class="day event">8</div>
+                        <div class="day">9</div>
+                        <div class="day">10</div>
+                        <div class="day">11</div>
+                        <div class="day">12</div>
+                        <div class="day">13</div>
+                        <div class="day event active">14</div>
+                        <div class="day today ">15</div>
+                        <div class="day">16</div>
+                        <div class="day">17</div>
+                        <div class="day">18</div>
+                        <div class="day">19</div>
+                        <div class="day">20</div>
+                        <div class="day event">21</div>
+                        <div class="day">22</div>
+                        <div class="day">23</div>
+                        <div class="day">24</div>
+                        <div class="day">25</div>
+                        <div class="day">26</div>
+                        <div class="day">27</div>
+                        <div class="day">28</div>
+                        <div class="day">29</div>
+                        <div class="day">30</div>
+                        <div class="day next-date">1</div>
+                        <div class="day next-date">2</div>
+                        <div class="day next-date">3</div>
+                        
+                    </div>
                 </div>
-                <h2 id="month-name">Agosto 2024</h2>
-            </div>
-            <div class="calendar-body" id="calendar-body">
-                <!-- Días se generarán con JavaScript -->
             </div>
         </div>
-            <script>
-            const calendarBody = document.getElementById('calendar-body');
-            const monthName = document.getElementById('month-name');
-            const prevMonthBtn = document.getElementById('prev-month');
-            const nextMonthBtn = document.getElementById('next-month');
-    
-            let currentMonth = new Date().getMonth();
-            let currentYear = new Date().getFullYear();
-            let selectedDay = null;
-    
-            function renderCalendar(month, year) {
-                const firstDay = new Date(year, month, 1).getDay();
-                const daysInMonth = new Date(year, month + 1, 0).getDate();
-                const today = new Date();
-                const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-                
-                monthName.textContent = `${monthNames[month]} ${year}`;
-    
-                calendarBody.innerHTML = '';
-                const days = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
-                days.forEach(day => {
-                    const div = document.createElement('div');
-                    div.className = 'header';
-                    div.textContent = day;
-                    calendarBody.appendChild(div);
-                });
-    
-                // Espacios vacíos antes del primer día del mes
-                for (let i = 0; i < firstDay; i++) {
-                    const div = document.createElement('div');
-                    div.className = 'empty';
-                    calendarBody.appendChild(div);
-                }
-    
-                // Días del mes
-                for (let day = 1; day <= daysInMonth; day++) {
-                    const div = document.createElement('div');
-                    div.className = 'day';
-                    div.textContent = day;
-                    div.addEventListener('click', () => selectDay(day));
-    
-                    // Marcar el día actual
-                    if (day === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
-                        div.classList.add('today');
-                    }
-    
-                    calendarBody.appendChild(div);
-                }
-            }
-    
-            function selectDay(day) {
-                if (selectedDay) {
-                    selectedDay.classList.remove('selected');
-                }
-                const dayDivs = Array.from(calendarBody.getElementsByClassName('day'));
-                selectedDay = dayDivs.find(div => div.textContent == day);
-                if (selectedDay) {
-                    selectedDay.classList.add('selected');
-                }
-            }
-    
-            prevMonthBtn.addEventListener('click', () => {
-                currentMonth--;
-                if (currentMonth < 0) {
-                    currentMonth = 11;
-                    currentYear--;
-                }
-                renderCalendar(currentMonth, currentYear);
-            });
-    
-            nextMonthBtn.addEventListener('click', () => {
-                currentMonth++;
-                if (currentMonth > 11) {
-                    currentMonth = 0;
-                    currentYear++;
-                }
-                renderCalendar(currentMonth, currentYear);
-            });
-    
-            // Renderizar el calendario inicial
-            renderCalendar(currentMonth, currentYear);
-            </script>
 
-        </div>
+
+        <script src="calendar.js"></script>
+    
+        <div id="calendar"></div>
+        
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </section>
  </section>
 
