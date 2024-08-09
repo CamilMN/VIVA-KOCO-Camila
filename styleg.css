@@ -236,9 +236,10 @@ img {
     text-align: center;
     td{
         padding: 1rem;
-        border: 5px solid #fe8b3e;
+        border: 3px solid #fe8b3e;
     }
     thead{
+        font-weight: bold;
         background-color: rgb(204, 255, 153);
     }
     tbody td:first-child{
@@ -260,9 +261,10 @@ img {
     text-align: center;
     td{
         padding: 1rem;
-        border: 5px solid #fe8b3e;
+        border: 3px solid #fe8b3e;
     }
     thead{
+        font-weight: bold;
         background-color: rgb(204, 255, 153);
     }
     tbody td:first-child{
