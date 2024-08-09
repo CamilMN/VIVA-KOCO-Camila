@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins";
+    background-color: #b6edfc;
+    font-size: 1.5rem;
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    background-image: url(images/nitido.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 80px 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+    font-size: 18px;
+    padding: 20px;
+    color: #ff0839;
+    font-weight: 600;
+    display: block;
+}
+
+
+.header-content {
+    display: flex;
+}
+
+.header-txt {
+    flex-basis: 50%;
+}
+
+.header-txt h1 { 
+    font-size: 80px;
+    color: #67bd68;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.header-txt span {
+    color: #e4ef69;
+}
+
+.header-txt p {
+    font-size: 20px;
+    color: rgb(255, 255, 255); 
+    margin-bottom:100px;
+    
+}
+.cuadro {
+    min-width: 600px;
+
+    margin: 0 auto;
+    justify-content: center;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para un efecto más atractivo */
+    text-align: justify; /* Centra el texto dentro del cuadro */
+    max-width: 80%; /* Ancho máximo opcional del cuadro */
+    width: 100%; /* Asegura que el cuadro ocupe el 100% del ancho disponible hasta el máximo especificado */
+}
+
+.intro{
+    padding: 25px 0;
+}
+.elije{
+    text-align: center;
+}
+.imagehome{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    padding: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}

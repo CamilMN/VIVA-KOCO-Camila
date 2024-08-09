@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins";
+    background-color: #b6edfc;
+    font-size: 1.5rem;
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    background-image: url(images/guia.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 80px 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+    font-size: 18px;
+    padding: 20px;
+    color: #fe8b3e;
+    font-weight: 600;
+    display: block;
+}
+
+
+.header-content {
+    display: flex;
+}
+
+.header-txt {
+    flex-basis: 50%;
+}
+
+.header-txt h1 { 
+    font-size: 80px;
+    color: #0f45a8;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.header-txt span {
+    color: #ff0839;
+}
+
+.header-txt p {
+    font-size: 20px;
+    color: black; 
+    margin-bottom:100px;
+}
+
+.titulohem {
+    padding: 25px 0;
+    text-align: center;
+    color: #fe8b3e;
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+.estaciones{
+    padding: 25px 0;
+    text-align:center;
+}
+
+
+
+.titulobject {
+    padding: 25px 0;
+    text-align: center;
+    color: #fe8b3e;
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+.cuadro {
+    min-width: 600px;
+
+    margin: 0 auto;
+    justify-content: center;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para un efecto más atractivo */
+    text-align: center; /* Centra el texto dentro del cuadro */
+    max-width: 80%; /* Ancho máximo opcional del cuadro */
+    width: 100%; /* Asegura que el cuadro ocupe el 100% del ancho disponible hasta el máximo especificado */
+}
+.imgseason{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+    padding: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+.cuadro2 {
+    min-width: 600px;
+    margin: 0 auto;
+    justify-content:center;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para un efecto más atractivo */
+    text-align: justify; /* Centra el texto dentro del cuadro */
+    max-width: 80%; /* Ancho máximo opcional del cuadro */
+    width: 100%; /* Asegura que el cuadro ocupe el 100% del ancho disponible hasta el máximo especificado */
+}
+
+.ayudar{
+    padding: 25px 0;
+}
+.tilayudar{
+    text-align: center;
+}
+.mejor{
+    padding: 25px 0;
+}
+.tilmejor{
+    text-align: center;
+}
+.donar{
+    padding: 25px 0;
+}
+.tildonar{
+    text-align: center;
+}
+.millas{
+    padding: 25px 0;
+}
+.tilmillas{
+    text-align: center;
+}
+.construye{
+    padding: 25px 0;
+}
+.tilconstruye{
+    text-align: center;
+}
+.tiempoam{
+    padding: 25px 0;
+}
+.tiltiempoam{
+    text-align: center;
+}
+.decor{
+    padding: 25px 0;
+}
+.tildecor{
+    text-align: center;
+}
+.calma{
+    padding: 25px 0;
+}
+.tilcalma{
+    text-align: center;
+}
+
+.cuadro3 {
+    min-width: 600px;
+    margin: 0 auto;
+    justify-content:center;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para un efecto más atractivo */
+    text-align: justify; /* Centra el texto dentro del cuadro */
+    max-width: 80%; /* Ancho máximo opcional del cuadro */
+    width: 100%; /* Asegura que el cuadro ocupe el 100% del ancho disponible hasta el máximo especificado */
+}
+
+.tituloherr {
+    padding: 25px 0;
+    text-align: center;
+    color: #fe8b3e;
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+.dura{
+    padding: 25px 0;
+}
+.tildura{
+    text-align: center;
+}
+.energy{
+    padding: 25px 0;
+}
+.tilenergy{
+    text-align: center;
+}
+.adqui{
+    padding: 25px 0;
+}
+.tiladqui{
+    text-align: center;
+}
+
+.cuadro > table {
+    padding: 25px 0;
+    border: 3px solid #fe8b3e;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    td{
+        padding: 1rem;
+        border: 5px solid #fe8b3e;
+    }
+    thead{
+        background-color: rgb(204, 255, 153);
+    }
+    tbody td:first-child{
+        background-color: rgb(204, 255, 153) ;
+    }
+    tbody tr:nth-child(2n){
+        background-color: #fff;
+    }
+    tbody tr:nth-child(2n+1){
+        background-color: #fff;
+    }
+}
+
+.cuadro3 > table {
+    padding: 25px 0;
+    border: 3px solid #fe8b3e;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    td{
+        padding: 1rem;
+        border: 5px solid #fe8b3e;
+    }
+    thead{
+        background-color: rgb(204, 255, 153);
+    }
+    tbody td:first-child{
+        background-color: rgb(204, 255, 153) ;
+    }
+    tbody tr:nth-child(2n){
+        background-color: #fff;
+    }
+    tbody tr:nth-child(2n+1){
+        background-color: #fff;
+    }
+}
+
+.indice > table{
+    
+    padding: 25px 0;
+    border: 1px solid #ffffff;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    td{
+        padding: 25px 0;
+        border: 5px solid #ffffff;
+    }
+    thead{
+        font-style: italic;
+        background-color: rgb(255, 255, 255);
+    }
+    tbody td:first-child{
+        background-color: rgb(255, 255, 255) ;
+    }
+    tbody tr:nth-child(2n){
+        background-color: #fff;
+    }
+    tbody tr:nth-child(2n+1){
+        background-color: #fff;
+    }
+}
+
+footer {
+    flex-direction: column;
+        text-align: center;
+    background-color: #dec6fa;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
