@@ -318,14 +318,16 @@ img {
 #scrollToTopBtn:hover {
     background-color: #ff6a25;
 }
+
 footer {
+    
     flex-direction: column;
-        text-align: center;
+    text-align: center;
     background-color: #dec6fa;
     color: rgb(0, 0, 0);
-    text-align: center;
     padding: 1rem;
     margin-top: auto;
+
 }
 footer p{
     font-size: medium;
