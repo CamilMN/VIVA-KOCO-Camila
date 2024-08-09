@@ -279,27 +279,25 @@ img {
 .indice > table{
     
     padding: 25px 0;
-    border: 1px solid #ffffff;
-    border-collapse: collapse;
+    border: 1px solid transparent;
+    border-collapse:separate;
     margin: auto;
     text-align: center;
+    
     td{
         padding: 25px 0;
-        border: 5px solid #ffffff;
+        border: 5px solid transparent;
     }
     thead{
-        font-style: italic;
+        font-weight: bold;
+        color: #3fce1b;
         background-color: rgb(255, 255, 255);
     }
     tbody td:first-child{
+        color: #3fce1b;
         background-color: rgb(255, 255, 255) ;
-    }
-    tbody tr:nth-child(2n){
-        background-color: #fff;
-    }
-    tbody tr:nth-child(2n+1){
-        background-color: #fff;
-    }
+
+}
 }
 
 footer {
