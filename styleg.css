@@ -302,6 +302,22 @@ img {
 }
 }
 
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fda367;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Ocultar el botón por defecto */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #ff6a25;
+}
 footer {
     flex-direction: column;
         text-align: center;
@@ -311,3 +327,5 @@ footer {
     padding: 1rem;
     margin-top: auto;
 }
+
+
